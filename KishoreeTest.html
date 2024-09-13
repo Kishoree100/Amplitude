@@ -28,10 +28,33 @@
         }
 
         // Function to handle the second button click
-        function onButtonClick2() {
+       function onButtonClick2() {
             console.log("Button 2 clicked!");
-            amplitude.track('Charged');
-            alert("Button 2 clicked!");
+
+            // Log the Charged event with properties
+            const chargedEventProperties = {
+                "amount": 49.99,
+                "currency": "USD",
+                "payment_method": "credit_card",
+                "items": [
+                    {
+                        "item_id": "12345",
+                        "item_name": "T-Shirt",
+                        "item_price": 19.99,
+                        "item_quantity": 1
+                    },
+                    {
+                        "item_id": "67890",
+                        "item_name": "Jeans",
+                        "item_price": 29.99,
+                        "item_quantity": 1
+                    }
+                ]
+            };
+
+            // Send Charged event to Amplitude
+            amplitude.track('Charged', chargedEventProperties);
+
         }
     </script>
 </head>
