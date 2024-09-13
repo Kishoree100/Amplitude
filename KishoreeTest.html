@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.22-min.js.gz"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('41626e90f1217ae55f36a9aa019da709', {"autocapture":{"elementInteractions":true}});</script>    
+    <title>Button Click Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // Function to handle the first button click
+        function onButtonClick1() {
+            console.log("Button 1 clicked!");
+            alert("Button 1 clicked!");
+        }
+
+        // Function to handle the second button click
+        function onButtonClick2() {
+            console.log("Button 2 clicked!");
+            alert("Button 2 clicked!");
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Two Button Click Actions</h1>
+
+    <!-- Button 1 -->
+    <button onclick="onButtonClick1()">Click Button 1</button>
+
+    <!-- Button 2 -->
+    <button onclick="onButtonClick2()">Click Button 2</button>
+
+</body>
+</html>
