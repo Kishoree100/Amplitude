@@ -23,12 +23,14 @@
         // Function to handle the first button click
         function onButtonClick1() {
             console.log("Button 1 clicked!");
+            amplitude.track('Sign Up');
             alert("Button 1 clicked!");
         }
 
         // Function to handle the second button click
         function onButtonClick2() {
             console.log("Button 2 clicked!");
+            amplitude.track('Charged');
             alert("Button 2 clicked!");
         }
     </script>
